@@ -1,0 +1,27 @@
+name: Candidate plugin release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - name: Match immutable release tag to package version
+        run: node --input-type=module -e 'import {readFileSync} from "node:fs"; const v=JSON.parse(readFileSync("plugins/bluebridge-sites/plugin.json")).version; if(process.env.GITHUB_REF_NAME!==`v${v}`)throw new Error("Release tag/version mismatch")'
+      - run: npm run package
+      - name: Publish new candidate assets
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" .artifacts/* --verify-tag --prerelease --title "Blue Bridge Sites $GITHUB_REF_NAME candidate" --notes-file RELEASE_NOTES.md

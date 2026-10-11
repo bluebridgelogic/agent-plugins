@@ -1,0 +1,16 @@
+{
+  "name": "bluebridge-plugins",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node scripts/verify.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.20.0",
+    "fflate": "0.8.3"
+  }
+}

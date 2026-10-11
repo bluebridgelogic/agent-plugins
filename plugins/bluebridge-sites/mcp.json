@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "bluebridge-sites": {
+      "type": "streamable-http",
+      "url": "https://manage.bluebridgelogic.com/mcp"
+    }
+  }
+}

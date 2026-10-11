@@ -1,0 +1,32 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "bluebridge-sites",
+  "version": "0.2.0",
+  "description": "Plan digital marketing and review websites through your existing agent, using authenticated Blue Bridge Sites access. Current execution capabilities are read-only.",
+  "author": {
+    "name": "Blue Bridge Logic",
+    "url": "https://bluebridgelogic.com"
+  },
+  "homepage": "https://manage.bluebridgelogic.com/setup.md",
+  "repository": "https://github.com/jamesBlueBridge/bluebridge-plugins",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "Blue Bridge Sites",
+        "shortDescription": "Plan marketing and review your websites with your existing agent.",
+        "developerName": "Blue Bridge Logic",
+        "category": "Productivity",
+        "capabilities": [
+          "Read"
+        ],
+        "defaultPrompt": [
+          "Set up Blue Bridge Sites",
+          "Show my websites",
+          "Help me prioritize my marketing content"
+        ]
+      }
+    }
+  }
+}

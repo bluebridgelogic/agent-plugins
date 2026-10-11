@@ -1,0 +1,12 @@
+{
+  "name": "bluebridge-sites",
+  "version": "0.2.0",
+  "description": "Plan digital marketing and review websites through your existing agent, using authenticated Blue Bridge Sites access. Current execution capabilities are read-only.",
+  "author": {
+    "name": "Blue Bridge Logic",
+    "url": "https://bluebridgelogic.com"
+  },
+  "homepage": "https://manage.bluebridgelogic.com/setup.md",
+  "repository": "https://github.com/jamesBlueBridge/bluebridge-plugins",
+  "license": "MIT"
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bluebridge-sites": {
+      "type": "http",
+      "url": "https://manage.bluebridgelogic.com/mcp"
+    }
+  }
+}
