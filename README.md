@@ -19,3 +19,7 @@ Run npm ci, npm test, then npm run package. Artifacts are written to ignored .ar
 ```
 
 For local Codex, add this Git repository through its plugin marketplace UI or CLI, then install `bluebridge-sites@bluebridge`. ChatGPT web and Claude Chat use their own plugin/connector interfaces; a CLI install does not install into those apps.
+
+## Maintainer native smoke check
+
+With Claude Code and Codex installed, run `python3 scripts/native-smoke.py`. It creates disposable profiles and a private version-update fixture, checks installation and cached skill files, then removes the profiles. It does not sign in or change your existing agent configuration. Package CI remains independent of proprietary CLIs and account credentials.
