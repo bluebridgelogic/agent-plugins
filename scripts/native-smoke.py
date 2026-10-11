@@ -42,6 +42,6 @@ with tempfile.TemporaryDirectory(prefix="bluebridge-plugin-native-") as scratch:
         installed = json.loads(run(agent, "plugin", "list", "--json"))
         if agent == "codex": installed = installed["installed"]
         assert installed[0]["version"] == target_version, installed
-        cache = scratch / agent / "plugins/cache/bluebridge/bluebridge-sites/0.2.0"
+        cache = scratch / agent / "plugins/cache/bluebridge/bluebridge-sites" / target_version
         assert len(list((cache / "skills").glob("*/SKILL.md"))) == 5
         print(f"PASS: {agent} isolated install and version update; five cached skills.")
