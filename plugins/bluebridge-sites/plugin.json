@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bluebridge-sites",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Plan digital marketing and review websites through your existing agent, using authenticated Blue Bridge Sites access. Current execution capabilities are read-only.",
   "author": {
     "name": "Blue Bridge Logic",
@@ -15,7 +15,7 @@
       "onboardingSkill": "./skills/setup/SKILL.md",
       "interface": {
         "displayName": "Blue Bridge Sites",
-        "shortDescription": "Plan marketing and review your websites with your existing agent.",
+        "shortDescription": "Plan marketing. Review sites.",
         "developerName": "Blue Bridge Logic",
         "category": "Productivity",
         "capabilities": [
@@ -25,7 +25,8 @@
           "Set up Blue Bridge Sites",
           "Show my websites",
           "Help me prioritize my marketing content"
-        ]
+        ],
+        "longDescription": "Use your existing agent to discuss marketing strategy, prioritize content, plan website work and review available performance evidence. Authenticated Sites tools currently read your authorized organizations, websites and draft status. Saving strategy/backlogs, retrieving measurements, source preparation and draft submission remain non-persisting mocks; social publishing is not implemented."
       }
     }
   }

@@ -1,4 +1,4 @@
-# Blue Bridge Sites 0.2.0 candidate
+# Blue Bridge Sites 0.2.1 candidate
 
 Bundles five distinct skills: setup, marketing strategy, content planning, website work and performance review. One shared skill tree supports Claude-compatible and portable OpenAI plugin manifests, with remote OAuth Sites access and separate marketplace catalogs.
 
@@ -9,3 +9,5 @@ Native Claude Code 2.1.296 and Codex 0.162.1 local-profile installation passed. 
 Start at https://manage.bluebridgelogic.com/setup.md. Third-party Claude Code marketplace auto-update is opt-in. Refreshing a catalog and updating an installed plugin are separate checks; reload/new sessions may be necessary. This GitHub marketplace is not a listing in the OpenAI public directory.
 
 Archives contain generic plugin files only. SHA256SUMS covers both ZIP downloads. Tags/assets are immutable; publish a new version rather than replacing old releases.
+
+This patch shortens the OpenAI subtitle to its documented limit and adds an explicit listing description. It does not add execution capabilities or claim directory approval. Version 0.2.0 remains available unchanged.

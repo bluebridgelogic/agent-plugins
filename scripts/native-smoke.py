@@ -3,6 +3,7 @@ import json, os, shutil, subprocess, tempfile
 from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
+target_version = json.loads((root / "plugins/bluebridge-sites/plugin.json").read_text())["version"]
 with tempfile.TemporaryDirectory(prefix="bluebridge-plugin-native-") as scratch:
     scratch = Path(scratch)
     fixture = scratch / "marketplace"
@@ -32,7 +33,7 @@ with tempfile.TemporaryDirectory(prefix="bluebridge-plugin-native-") as scratch:
         installed = json.loads(run(agent, "plugin", "list", "--json"))
         if agent == "codex": installed = installed["installed"]
         assert installed[0]["version"] == "0.1.99"
-    version("0.2.0")
+    version(target_version)
     run("claude", "plugin", "marketplace", "update", "bluebridge")
     run("claude", "plugin", "update", "bluebridge-sites@bluebridge")
     # Codex's current CLI refreshes installed content via add; local catalogs read directly.
@@ -40,7 +41,7 @@ with tempfile.TemporaryDirectory(prefix="bluebridge-plugin-native-") as scratch:
     for agent in ["claude", "codex"]:
         installed = json.loads(run(agent, "plugin", "list", "--json"))
         if agent == "codex": installed = installed["installed"]
-        assert installed[0]["version"] == "0.2.0", installed
+        assert installed[0]["version"] == target_version, installed
         cache = scratch / agent / "plugins/cache/bluebridge/bluebridge-sites/0.2.0"
         assert len(list((cache / "skills").glob("*/SKILL.md"))) == 5
         print(f"PASS: {agent} isolated install and version update; five cached skills.")

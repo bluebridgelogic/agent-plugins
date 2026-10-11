@@ -14,6 +14,9 @@ for(const name of ['plugin','mcp']) {
  assert.ok(validate(await json(`${root}/${name}.json`)),JSON.stringify(validate.errors));
 }
 assert.equal(portable.name,claude.name);assert.equal(portable.version,claude.version);
+const listing=portable.extensions['com.openai'].interface;
+assert.ok(listing.shortDescription.length<=30,'OpenAI listing subtitle is limited to 30 characters');
+assert.ok(listing.longDescription.length>0 && listing.longDescription.length<=4000);
 assert.match(portable.version,/^\d+\.\d+\.\d+$/);
 const files=await collect(root);
 const skillNames=['setup','marketing-strategy','content-planning','website-work','performance-review'];
