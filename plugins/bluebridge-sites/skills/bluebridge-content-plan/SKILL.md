@@ -1,14 +1,14 @@
 ---
 name: bluebridge-content-plan
-description: Create and prioritize content ideas, briefs and a production backlog for Blue Bridge Sites clients. Use for articles, website content, social posts or content calendars.
+description: Prioritize content ideas, briefs and planned marketing work for Blue Bridge Sites clients. Use for articles, website content, social drafts or content calendars connected to the marketing plan.
 ---
 
 # Plan my content
 
-Read [access and capability rules](references/access.md). Load organization context and `get_content_backlog` when implemented; mocked responses contain no saved backlog. Use current agreed strategy and available client facts to propose work.
+Read [access and capability rules](references/access.md). Select the organization, load `get_marketing_context` and search/read its plan plus existing work documents. `get_content_backlog` and `save_backlog` are old mocks; the real planning workflow stores Markdown work records through `save_marketing_changeset` when enabled. Do not create a second backlog when an existing registered index/work format already serves the client.
 
-Prioritize by business value, audience need, effort, supporting evidence and dependencies. A useful proposed item has a topic, audience/purpose, target site or channel, priority with rationale, brief, owner, status and missing inputs. Assign server IDs only after a real persistence response.
+Prioritize using the agreed goals, audience needs, evidence, effort and production capacity. For each useful work item record a stable identity, working title, audience/purpose, target site/channel, format, priority and rationale, brief, owner, status, dependencies/missing inputs and relevant links. Use the returned planning-path convention, for example `strategy/work/<stable-id>.md`, and link work from the plan/index where appropriate. Preserve the same ID across updates.
 
-Interview the client for facts/examples; draft articles or social copy using their approved positioning and voice. Flag unsupported claims and client review needs. Move work through idea, brief, production and review. Mark published only after actual delivery evidence with a URL/date. Planning social posts or a calendar does not schedule or publish them.
+Interview the client for expertise and examples; draft content using approved positioning and voice. Flag unsupported claims and review needs. Distinguish an idea, a ready brief, work in progress, blocked work and client review. Mark published only with actual delivery evidence and a URL/date. A calendar entry does not schedule a post; a saved brief does not execute website changes.
 
-When asked to save, check capabilities. The current `save_backlog` operation preview does not persist. Explain this and return exportable conversation-only drafts. Do not claim another session can recover unsaved work from Sites. Website implementation belongs to bluebridge-website when its required source/runtime capabilities exist.
+To save, follow bluebridge-marketing-plan's revision/hash and retry rules: read complete existing documents, submit related changes as one changeset, and confirm a saved response. Respect explicit unsaved brainstorming. If the save tool or editing role/consent is unavailable, return exportable conversation-only proposals. Website implementation belongs to bluebridge-website; planning access grants no website mutation or publication authority.

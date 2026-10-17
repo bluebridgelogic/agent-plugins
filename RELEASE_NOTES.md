@@ -1,3 +1,9 @@
+# Blue Bridge Sites 0.3.0 candidate
+
+Add the marketing planning workflow: organization context, registered document discovery/search/reads, working plans, decisions, questions, planned-work Markdown, history and revision/idempotency-checked save guidance. Discover actual backend availability; saves need explicit marketing-write consent and current owner/editor access. Existing grants remain read-only until renewed. A successful saved response identifies a Git commit; pending/unknown outcomes require reconciliation.
+
+Keep source/website, analytics and publication limits explicit. Existing mock names are not repurposed as saves. Website guidance now uses hosted source reads rather than assuming a client-local checkout. Skill names, plugin identity and connector address remain stable. Account-level Claude save/resume and marketplace sync still require live verification separately from local Worker/OAuth/package/browser tests.
+
 # Blue Bridge Sites 0.2.5 candidate
 
 Remove Claude's top-level `icon` key after the actual account marketplace importer reported it as unrecognized at `d82ea34` (October 17). Keep the **Blue Bridge Sites** display name, bundled company icon, portable OpenAI logo/composer references, skills and connector permissions. Packaging and CLI checks cannot establish account importer compatibility; re-sync to verify the warning is gone. The separate executable/settings-change notice is informational, not the icon warning.

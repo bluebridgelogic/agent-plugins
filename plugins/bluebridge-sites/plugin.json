@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bluebridge-sites",
-  "version": "0.2.5",
-  "description": "Plan digital marketing and review websites through your existing agent, using authenticated Blue Bridge Sites access. Current execution capabilities are read-only.",
+  "version": "0.3.0",
+  "description": "Develop marketing plans, save authorized planning documents, and inspect websites through Blue Bridge Sites. Website editing and publication remain separate.",
   "author": {
     "name": "Blue Bridge Logic",
     "url": "https://bluebridgelogic.com"
@@ -15,18 +15,19 @@
       "onboardingSkill": "./skills/bluebridge-connect/SKILL.md",
       "interface": {
         "displayName": "Blue Bridge Sites",
-        "shortDescription": "Plan marketing. Review sites.",
+        "shortDescription": "Plan marketing. Save progress.",
         "developerName": "Blue Bridge Logic",
         "category": "Productivity",
         "capabilities": [
-          "Read"
+          "Read",
+          "Write"
         ],
         "defaultPrompt": [
           "Set up Blue Bridge Sites",
           "Show my websites",
           "Help me prioritize my marketing content"
         ],
-        "longDescription": "Use your existing agent to discuss marketing strategy, prioritize content, plan website work and review available performance evidence. Authenticated Sites tools currently read your authorized organizations, websites and draft status. Saving strategy/backlogs, retrieving measurements, source preparation and draft submission remain non-persisting mocks; social publishing is not implemented.",
+        "longDescription": "Read registered organization guidance and marketing documents, discuss goals and priorities, and save working plans, decisions, questions and planned work when the backend is enabled and you explicitly consent as an organization owner/editor. Resume from repository-owned records in another session. Inspect website draft status and source. Website editing, build submission, analytics ingestion and social publishing remain unavailable through these tools; human approval/publication stay separate.",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png",
         "brandColor": "#2E4A62"
