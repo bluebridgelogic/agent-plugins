@@ -2,11 +2,15 @@
 
 Manage digital marketing through your existing Claude or ChatGPT agent. The plugin bundles setup, marketing strategy, content planning, website work and performance review skills with the authenticated remote Sites connector. Website/organization lists and draft status are real; strategy storage, analytics, source preparation and draft submission are explicit non-persisting mocks. Social scheduling/publishing is not implemented.
 
-This is version 0.2.3, a candidate release. Start at https://manage.bluebridgelogic.com/setup.md. Installing this package is separate from signing in, obtaining organization access and verifying fresh reads. The existing manually configured Claude connector was reported to work; the new bundled plugin still requires account-level Chat/Cowork/ChatGPT testing.
+This is version 0.2.4, a candidate release. Start at https://manage.bluebridgelogic.com/setup.md. Installing this package is separate from signing in, obtaining organization access and verifying fresh reads. The existing manually configured Claude connector was reported to work; the new bundled plugin still requires account-level Chat/Cowork/ChatGPT testing.
 
 Claude: add https://github.com/bluebridgelogic/agent-plugins as a marketplace in Customize → Plugins, then install Blue Bridge Sites. Connect/sign in from its Connectors tab. In Claude Code, enable this third-party marketplace's auto-update explicitly if desired; updates are used after reload/new session. Local Codex can use the repository's .agents/plugins catalog. ChatGPT web distribution/import depends on workspace support and directory review; this repository is not itself an approved public-directory listing.
 
 The public repository contains generic instructions only. Client records remain behind Sites authentication and current membership checks. No API keys or secrets are bundled. Human approval and separate publication stay in Sites.
+
+## Branding
+
+Claude's manifest explicitly sets the display name to **Blue Bridge Sites** and points to `assets/icon.png`, the existing square company bridge mark from `bluebridgelogic/BlueBridge` (`company/brand-assets/icon.png`). The portable OpenAI interface uses the same icon for its logo/composer. The asset is bundled in both ZIPs. Actual rendering after marketplace sync needs verification in the target app; the manifest icon field is documented for Anthropic directory listings and does not establish custom-marketplace UI behavior.
 
 ## Skill names
 

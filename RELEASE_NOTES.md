@@ -1,3 +1,7 @@
+# Blue Bridge Sites 0.2.4 candidate
+
+Set Claude's explicit display name to **Blue Bridge Sites** and bundle the existing square Blue Bridge company icon. Reference it in Claude's manifest and the portable OpenAI interface. Preserve plugin/marketplace IDs, skill names, connector configuration and permissions. Marketplace sync and actual app rendering remain separate checks; no guarantee that every app uses the icon field.
+
 # Blue Bridge Sites 0.2.3 candidate
 
 Use `bluebridge-connect`, `bluebridge-marketing-plan`, `bluebridge-content-plan`, `bluebridge-website` and `bluebridge-results`, with client-facing titles describing their tasks. Update onboarding and cross-skill references. Plugin and marketplace IDs stay the same. Version 0.2.3 replaces the 0.2.2 skill names. Refresh/update the plugin and reload/start a new session. Existing tags and release assets stay unchanged.

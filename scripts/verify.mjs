@@ -16,9 +16,19 @@ for(const name of ['plugin','mcp']) {
 assert.equal(portable.name,claude.name);assert.equal(portable.version,claude.version);
 const listing=portable.extensions['com.openai'].interface;
 assert.ok(listing.shortDescription.length<=30,'OpenAI listing subtitle is limited to 30 characters');
+assert.equal(claude.displayName,listing.displayName);
+assert.equal(claude.icon,listing.logo);
+assert.equal(claude.icon,listing.composerIcon);
 assert.ok(listing.longDescription.length>0 && listing.longDescription.length<=4000);
 assert.match(portable.version,/^\d+\.\d+\.\d+$/);
 const files=await collect(root);
+assert.match(claude.icon,/^\.\/assets\/[a-z-]+\.png$/);
+const icon=files[claude.icon.slice(2)];
+assert.ok(icon,'Referenced icon must be packaged');
+assert.equal(icon.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
+assert.equal(icon.readUInt32BE(16),icon.readUInt32BE(20),'Plugin icon must be square');
+assert.ok(icon.readUInt32BE(16)>0);
+
 const skillNames=['bluebridge-connect','bluebridge-marketing-plan','bluebridge-content-plan','bluebridge-website','bluebridge-results'];
 for(const name of skillNames){
  assert.ok(files[`skills/${name}/SKILL.md`]);
@@ -26,7 +36,7 @@ for(const name of skillNames){
  assert.match(files[`skills/${name}/SKILL.md`].toString(),new RegExp('name: '+name+'\\n'));
 }
 assert.ok(files[portable.extensions['com.openai'].onboardingSkill.slice(2)]);
-for(const name of Object.keys(files))assert.ok(['README.md','LICENSE','plugin.json','mcp.json','.mcp.json','.claude-plugin/plugin.json'].includes(name)||/^skills\/[a-z-]+\/(SKILL.md|references\/access.md)$/.test(name),'Unexpected packaged file '+name);
+for(const name of Object.keys(files))assert.ok(['README.md','LICENSE','assets/icon.png','plugin.json','mcp.json','.mcp.json','.claude-plugin/plugin.json'].includes(name)||/^skills\/[a-z-]+\/(SKILL.md|references\/access.md)$/.test(name),'Unexpected packaged file '+name);
 for(const name of ['mcp.json','.mcp.json']){
  const config=JSON.parse(files[name]);const server=config.mcpServers['bluebridge-sites'];
  assert.equal(server.url,'https://manage.bluebridgelogic.com/mcp');
