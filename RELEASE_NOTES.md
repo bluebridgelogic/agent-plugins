@@ -1,3 +1,9 @@
+# Blue Bridge Sites 0.4.0 candidate
+
+Add real website-draft editing guidance: commit-pinned context and complete-file reads, exact multi-file changesets, source/build/preview status, protected preview links, interrupted-operation recovery and fresh-conversation continuation. Keep technical source details in tool calls and explain progress in client language. Writes require source-read and management consent plus current owner/editor access; backend capabilities remain authoritative. No client-local runtime or Git credentials are needed.
+
+Multiple changesets may be previewed before a separate release handoff. Failed builds retain the last good preview and must be described accurately. Image uploads, page deletion/renaming, dependencies/configuration changes, automatic release approval and publication are outside this slice. Package/CLI checks and local Worker/browser tests do not establish the actual Claude hosted edit flow; verify it after marketplace sync.
+
 # Blue Bridge Sites 0.3.2 candidate
 
 Keep client conversations focused on marketing outcomes rather than repositories, branches, files or save hashes. Clarify that Blue Bridge manages hosting/site operations and analytics setup, measurement integrations and reporting; clients supply business direction, expertise, budget and approvals. Separate that responsibility from verified connection/data availability, and assign unverified measurement setup to Blue Bridge follow-up. Permission to save does not establish a successful save. Keep private vault/path details out of routine onboarding.

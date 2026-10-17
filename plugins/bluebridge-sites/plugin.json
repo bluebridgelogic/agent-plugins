@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bluebridge-sites",
-  "version": "0.3.2",
-  "description": "Develop marketing plans, save authorized planning documents, and inspect websites through Blue Bridge Sites. Website editing and publication remain separate.",
+  "version": "0.4.0",
+  "description": "Plan marketing, save progress, and edit website drafts with hosted previews through Blue Bridge Sites. Human approval and publication stay separate.",
   "author": {
     "name": "Blue Bridge Logic",
     "url": "https://bluebridgelogic.com"
@@ -15,7 +15,7 @@
       "onboardingSkill": "./skills/bluebridge-connect/SKILL.md",
       "interface": {
         "displayName": "Blue Bridge Sites",
-        "shortDescription": "Plan marketing. Save progress.",
+        "shortDescription": "Plan marketing. Update sites.",
         "developerName": "Blue Bridge Logic",
         "category": "Productivity",
         "capabilities": [
@@ -27,7 +27,7 @@
           "Show my websites",
           "Help me prioritize my marketing content"
         ],
-        "longDescription": "Read registered organization guidance and marketing documents, discuss goals and priorities, and save working plans, decisions, questions and planned work when the backend is enabled and you explicitly consent as an organization owner/editor. Resume from repository-owned records in another session. Inspect website draft status and source. Website editing, build submission, analytics ingestion and social publishing remain unavailable through these tools; human approval/publication stay separate.",
+        "longDescription": "Read organization guidance, develop marketing plans and save working plans, decisions and content priorities with explicit consent. Edit website drafts through exact revision-checked changesets, check build results and open protected hosted previews. Resume saved work in another conversation. Actions require configured backend capabilities and current organization access. Image uploads, page deletion/renaming, analytics ingestion and social publishing are not available in this release. Human review, approval and publication remain separate.",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png",
         "brandColor": "#2E4A62"
