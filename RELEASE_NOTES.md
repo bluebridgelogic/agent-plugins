@@ -1,3 +1,9 @@
+# Blue Bridge Sites 0.3.2 candidate
+
+Keep client conversations focused on marketing outcomes rather than repositories, branches, files or save hashes. Clarify that Blue Bridge manages hosting/site operations and analytics setup, measurement integrations and reporting; clients supply business direction, expertise, budget and approvals. Separate that responsibility from verified connection/data availability, and assign unverified measurement setup to Blue Bridge follow-up. Permission to save does not establish a successful save. Keep private vault/path details out of routine onboarding.
+
+This updates guidance, not analytics integrations. Actual client-facing behavior needs a fresh conversation after syncing; package/CLI validation alone does not establish it.
+
 # Blue Bridge Sites 0.3.1 candidate
 
 Make decisions durable shared context without gating routine edits. The marketing skill maintains stable decision IDs, pending/resolved statuses, owners, outcomes, actual decision makers/dates, evidence and supersession links. Fresh sessions surface relevant pending choices; content work links only real dependencies and keeps independent work moving. Saver identity and save time are distinct from decision attribution. Unknown facts stay unknown, and drafting a proposal does not confirm its strategy.

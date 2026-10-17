@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bluebridge-sites",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Develop marketing plans, save authorized planning documents, and inspect websites through Blue Bridge Sites. Website editing and publication remain separate.",
   "author": {
     "name": "Blue Bridge Logic",
