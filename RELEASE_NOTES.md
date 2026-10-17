@@ -1,3 +1,7 @@
+# Blue Bridge Sites 0.2.5 candidate
+
+Remove Claude's top-level `icon` key after the actual account marketplace importer reported it as unrecognized at `d82ea34` (October 17). Keep the **Blue Bridge Sites** display name, bundled company icon, portable OpenAI logo/composer references, skills and connector permissions. Packaging and CLI checks cannot establish account importer compatibility; re-sync to verify the warning is gone. The separate executable/settings-change notice is informational, not the icon warning.
+
 # Blue Bridge Sites 0.2.4 candidate
 
 Set Claude's explicit display name to **Blue Bridge Sites** and bundle the existing square Blue Bridge company icon. Reference it in Claude's manifest and the portable OpenAI interface. Preserve plugin/marketplace IDs, skill names, connector configuration and permissions. Marketplace sync and actual app rendering remain separate checks; no guarantee that every app uses the icon field.

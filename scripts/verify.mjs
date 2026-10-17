@@ -17,13 +17,13 @@ assert.equal(portable.name,claude.name);assert.equal(portable.version,claude.ver
 const listing=portable.extensions['com.openai'].interface;
 assert.ok(listing.shortDescription.length<=30,'OpenAI listing subtitle is limited to 30 characters');
 assert.equal(claude.displayName,listing.displayName);
-assert.equal(claude.icon,listing.logo);
-assert.equal(claude.icon,listing.composerIcon);
+assert.ok(!Object.hasOwn(claude,'icon'),'Claude account marketplace rejects the top-level icon field');
+assert.equal(listing.logo,listing.composerIcon);
 assert.ok(listing.longDescription.length>0 && listing.longDescription.length<=4000);
 assert.match(portable.version,/^\d+\.\d+\.\d+$/);
 const files=await collect(root);
-assert.match(claude.icon,/^\.\/assets\/[a-z-]+\.png$/);
-const icon=files[claude.icon.slice(2)];
+assert.match(listing.logo,/^\.\/assets\/[a-z-]+\.png$/);
+const icon=files[listing.logo.slice(2)];
 assert.ok(icon,'Referenced icon must be packaged');
 assert.equal(icon.subarray(0,8).toString('hex'),'89504e470d0a1a0a');
 assert.equal(icon.readUInt32BE(16),icon.readUInt32BE(20),'Plugin icon must be square');
