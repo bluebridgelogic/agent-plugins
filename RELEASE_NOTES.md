@@ -1,3 +1,9 @@
+# Blue Bridge Sites 0.3.1 candidate
+
+Make decisions durable shared context without gating routine edits. The marketing skill maintains stable decision IDs, pending/resolved statuses, owners, outcomes, actual decision makers/dates, evidence and supersession links. Fresh sessions surface relevant pending choices; content work links only real dependencies and keeps independent work moving. Saver identity and save time are distinct from decision attribution. Unknown facts stay unknown, and drafting a proposal does not confirm its strategy.
+
+This is skill/document guidance using the existing planning backend, not a new approval engine or database schema. Package and CLI validation do not establish actual Claude account behavior; verify a clean marketplace sync and realistic planning conversation separately.
+
 # Blue Bridge Sites 0.3.0 candidate
 
 Add the marketing planning workflow: organization context, registered document discovery/search/reads, working plans, decisions, questions, planned-work Markdown, history and revision/idempotency-checked save guidance. Discover actual backend availability; saves need explicit marketing-write consent and current owner/editor access. Existing grants remain read-only until renewed. A successful saved response identifies a Git commit; pending/unknown outcomes require reconciliation.
