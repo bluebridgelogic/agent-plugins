@@ -7,6 +7,6 @@
     "url": "https://bluebridgelogic.com"
   },
   "homepage": "https://manage.bluebridgelogic.com/setup.md",
-  "repository": "https://github.com/jamesBlueBridge/bluebridge-plugins",
+  "repository": "https://github.com/bluebridgelogic/agent-plugins",
   "license": "MIT"
 }
