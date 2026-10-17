@@ -19,7 +19,7 @@ assert.ok(listing.shortDescription.length<=30,'OpenAI listing subtitle is limite
 assert.ok(listing.longDescription.length>0 && listing.longDescription.length<=4000);
 assert.match(portable.version,/^\d+\.\d+\.\d+$/);
 const files=await collect(root);
-const skillNames=['setup','marketing-strategy','content-planning','website-work','performance-review'];
+const skillNames=['setup','marketing-strategy','content-planning','website-work','performance-review'].map(name=>'bluebridge-sites-'+name);
 for(const name of skillNames){
  assert.ok(files[`skills/${name}/SKILL.md`]);
  assert.ok(files[`skills/${name}/references/access.md`]);

@@ -1,3 +1,11 @@
+# Blue Bridge Sites 0.2.2 candidate
+
+Prefix all five skill names and folders with `bluebridge-sites-` so standalone discovery and command menus identify the product. The onboarding target and cross-skill references use the new paths/names. Plugin and marketplace IDs remain stable. Refresh/update the plugin and reload/start a new session; previous short skill names are no longer included.
+
+Package/schema/archive checks and isolated Claude Code/Codex install-and-update checks passed with exactly the five prefixed skill directories.
+
+This patch changes skill names only; it adds no backend permissions or execution capabilities. Account-level Claude Chat/Desktop/mobile and ChatGPT discovery/update behavior still requires verification. Earlier 0.2.1 tags/assets remain unchanged.
+
 # Blue Bridge Sites 0.2.1 candidate
 
 Bundles five distinct skills: setup, marketing strategy, content planning, website work and performance review. One shared skill tree supports Claude-compatible and portable OpenAI plugin manifests, with remote OAuth Sites access and separate marketplace catalogs.

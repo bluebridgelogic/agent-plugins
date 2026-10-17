@@ -1,9 +1,9 @@
 ---
-name: website-work
+name: bluebridge-sites-website-work
 description: Inspect Blue Bridge Sites website draft status and plan or prepare website changes. Use for editing a site, checking a draft or reviewing a protected preview.
 ---
 
-# Website Work
+# Blue Bridge Sites Website Work
 
 Read [access and capability rules](references/access.md). Choose a returned authorized site and call `get_site_status`. Load `get_site_brief` when implemented; current mock context is not a real brief. Report draft/preview status in client language and link the returned portal URL.
 

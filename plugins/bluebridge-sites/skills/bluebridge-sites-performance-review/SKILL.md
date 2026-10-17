@@ -1,9 +1,9 @@
 ---
-name: performance-review
+name: bluebridge-sites-performance-review
 description: Review available traffic, search visibility and marketing performance for Blue Bridge Sites clients. Use for marketing check-ins, SEO position, AI visibility or deciding what to improve next.
 ---
 
-# Performance Review
+# Blue Bridge Sites Performance Review
 
 Read [access and capability rules](references/access.md). Select the authorized site and check `get_performance_summary` capability. Current responses are mocks: do not supply sample client metrics or infer measured progress from a successful setup.
 
