@@ -1,3 +1,7 @@
+# Blue Bridge Sites 0.2.3 candidate
+
+Use `bluebridge-connect`, `bluebridge-marketing-plan`, `bluebridge-content-plan`, `bluebridge-website` and `bluebridge-results`, with client-facing titles describing their tasks. Update onboarding and cross-skill references. Plugin and marketplace IDs stay the same. Version 0.2.3 replaces the 0.2.2 skill names. Refresh/update the plugin and reload/start a new session. Existing tags and release assets stay unchanged.
+
 # Blue Bridge Sites 0.2.2 candidate
 
 Prefix all five skill names and folders with `bluebridge-sites-` so standalone discovery and command menus identify the product. The onboarding target and cross-skill references use the new paths/names. Plugin and marketplace IDs remain stable. Refresh/update the plugin and reload/start a new session; previous short skill names are no longer included.

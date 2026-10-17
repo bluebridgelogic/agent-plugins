@@ -1,9 +1,9 @@
 ---
-name: bluebridge-sites-setup
+name: bluebridge-connect
 description: Set up Blue Bridge Sites, connect the client account, select an organization and verify fresh website reads. Use when installing, connecting or troubleshooting Blue Bridge Sites.
 ---
 
-# Blue Bridge Sites Setup
+# Connect to Blue Bridge
 
 Help the user start using Sites for their digital marketing with the agent they already know. Follow the current public guide at https://manage.bluebridgelogic.com/setup.md; identify the intended app/surface before configuring anything. Reading a guide is not installation.
 

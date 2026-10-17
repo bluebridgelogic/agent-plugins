@@ -43,6 +43,6 @@ with tempfile.TemporaryDirectory(prefix="bluebridge-plugin-native-") as scratch:
         if agent == "codex": installed = installed["installed"]
         assert installed[0]["version"] == target_version, installed
         cache = scratch / agent / "plugins/cache/bluebridge/bluebridge-sites" / target_version
-        expected_names = {"bluebridge-sites-" + name for name in ["setup", "marketing-strategy", "content-planning", "website-work", "performance-review"]}
+        expected_names = {"bluebridge-connect", "bluebridge-marketing-plan", "bluebridge-content-plan", "bluebridge-website", "bluebridge-results"}
         assert {path.parent.name for path in (cache / "skills").glob("*/SKILL.md")} == expected_names
         print(f"PASS: {agent} isolated install and version update; five product-prefixed cached skills.")
