@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "bluebridge-sites",
-  "version": "0.4.0",
-  "description": "Plan marketing, save progress, and edit website drafts with hosted previews through Blue Bridge Sites. Human approval and publication stay separate.",
+  "version": "0.5.0",
+  "description": "Plan marketing and edit websites with fast local workspaces or hosted previews. Save batches to Sites; human approval and publication stay separate.",
   "author": {
     "name": "Blue Bridge Logic",
     "url": "https://bluebridgelogic.com"
@@ -27,7 +27,7 @@
           "Show my websites",
           "Help me prioritize my marketing content"
         ],
-        "longDescription": "Read organization guidance, develop marketing plans and save working plans, decisions and content priorities with explicit consent. Edit website drafts through exact revision-checked changesets, check build results and open protected hosted previews. Resume saved work in another conversation. Actions require configured backend capabilities and current organization access. Image uploads, page deletion/renaming, analytics ingestion and social publishing are not available in this release. Human review, approval and publication remain separate.",
+        "longDescription": "Plan marketing and save working plans, decisions and content priorities with explicit consent. In capable desktop environments, iterate on a local website folder and preview, then save a revision-checked batch to Sites. Other environments use hosted editing and previews. Resume shared work across conversations; unsent local changes stay on that computer. Actions require configured backend capabilities and current access. Binary uploads, page deletion/renaming, analytics ingestion and social publishing remain unavailable. Human review, approval and publication stay separate.",
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png",
         "brandColor": "#2E4A62"

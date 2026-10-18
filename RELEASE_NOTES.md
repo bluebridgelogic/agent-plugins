@@ -1,3 +1,9 @@
+# Blue Bridge Sites 0.5.0 candidate
+
+Add environment-aware website editing guidance. Claude Code Desktop can open a revision-pinned local site folder, run its development preview and iterate before submitting one batch through Sites. Other environments retain hosted editing. The Sites-owned standalone helper uses the client’s browser OAuth login; no GitHub or platform credentials are needed. Preserve existing folders, pending batch recovery and local changes during conflicts. Shared continuation begins after submission; local previews never bypass hosted build verification or owner approval/publication. Text/batch limits and unsupported binary/deletion/configuration edits remain explicit.
+
+Backend/helper verification and plugin packaging are separate from actual Claude Code Desktop acceptance. Verify the new plugin version, helper sign-in, local preview, multi-edit batch and matching hosted preview in the real account.
+
 # Blue Bridge Sites 0.4.0 candidate
 
 Add real website-draft editing guidance: commit-pinned context and complete-file reads, exact multi-file changesets, source/build/preview status, protected preview links, interrupted-operation recovery and fresh-conversation continuation. Keep technical source details in tool calls and explain progress in client language. Writes require source-read and management consent plus current owner/editor access; backend capabilities remain authoritative. No client-local runtime or Git credentials are needed.

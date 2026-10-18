@@ -1,7 +1,7 @@
 {
   "name": "bluebridge-sites",
-  "version": "0.4.0",
-  "description": "Plan marketing, save progress, and edit website drafts with hosted previews through Blue Bridge Sites. Human approval and publication stay separate.",
+  "version": "0.5.0",
+  "description": "Plan marketing and edit websites with fast local workspaces or hosted previews. Save batches to Sites; human approval and publication stay separate.",
   "author": {
     "name": "Blue Bridge Logic",
     "url": "https://bluebridgelogic.com"
