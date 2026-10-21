@@ -18,7 +18,11 @@ The skills are `bluebridge-connect` (Connect to Blue Bridge), `bluebridge-market
 
 ## Releases
 
-Run npm ci, npm test, then npm run package. Artifacts are written to ignored .artifacts: plugin ZIP, marketplace ZIP and SHA256SUMS. Both archives carry the same source version. Publish a new Git tag/release; never replace old assets. Push a version bump to update the marketplace; catalog synchronization and installed-plugin refresh depend on the client interface and its settings.
+Run `npm ci` and `npm run validate` before sharing a revision. The combined gate runs package/schema/reference checks, negative fixtures, pinned Claude Code 2.1.299 strict plugin and marketplace validation, and reproducible packaging. Warnings fail the gate. CI and tagged releases use this same command. Artifacts are written to ignored `.artifacts`: plugin ZIP, marketplace ZIP and SHA256SUMS. Never replace existing release assets.
+
+Run `npm run hooks:install` once per clone to enable the repository-local pre-push hook; it refuses existing hooks/configuration rather than replacing them. Alternatively, `npm run push:checked -- origin <review-branch>` uses the hook for that push. The hook validates the actual outgoing committed snapshots, so uncommitted fixes cannot hide broken pushed files. It blocks direct pushes to `main`: push a review branch, require the package check on its PR, then merge it. Configure the GitHub ruleset to require that check and prohibit bypass for server-side enforcement; the local hook alone cannot prevent another clone from bypassing it. Global hooks and personal agent profiles are unchanged.
+
+Strict CLI checks do not establish Claude account importer/runtime compatibility. The observed top-level `icon` stripping has a regression check, but the authoritative Enterprise importer check is not run by this gate and is reported as NOT RUN. Final acceptance still records the exact marketplace version/commit and real-account sync warnings, OAuth, reads and saves. `python3 scripts/native-smoke.py` separately verifies installation/update in disposable Claude/Codex profiles.
 
 ## Claude Code installation
 
