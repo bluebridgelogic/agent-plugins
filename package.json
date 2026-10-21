@@ -7,9 +7,13 @@
   },
   "scripts": {
     "test": "node scripts/verify.mjs",
-    "package": "node scripts/package.mjs"
+    "package": "node scripts/package.mjs",
+    "validate": "node --test scripts/validate.test.mjs && node scripts/validate.mjs",
+    "push:checked": "git -c core.hooksPath=.githooks push",
+    "hooks:install": "node scripts/install-hooks.mjs"
   },
   "devDependencies": {
+    "@anthropic-ai/claude-code": "2.1.299",
     "ajv": "^8.20.0",
     "fflate": "0.8.3"
   }

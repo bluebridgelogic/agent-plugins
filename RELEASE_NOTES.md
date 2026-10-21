@@ -1,3 +1,9 @@
+# Blue Bridge Sites 0.6.0 candidate
+
+Add image guidance for capable website editing environments. The desktop helper imports a still PNG/JPEG/WebP into a content-addressed upload path; submit it together with its page edits through the same atomic batch and hosted preview workflow. Hosted tools accept image bytes only where the backend advertises support and the agent can access them. Per-file/batch limits, immutable images, browser verification and separate owner approval/publication remain explicit. Actual account acceptance remains separate from local checks.
+
+Maintainer releases now use a shared pinned strict Claude validator, reproducible package checks and a repository-local pre-push hook with a branch/PR route. Enterprise importer validation remains explicitly unrun.
+
 # Blue Bridge Sites 0.5.0 candidate
 
 Add environment-aware website editing guidance. Claude Code Desktop can open a revision-pinned local site folder, run its development preview and iterate before submitting one batch through Sites. Other environments retain hosted editing. The Sites-owned standalone helper uses the client’s browser OAuth login; no GitHub or platform credentials are needed. Preserve existing folders, pending batch recovery and local changes during conflicts. Shared continuation begins after submission; local previews never bypass hosted build verification or owner approval/publication. Text/batch limits and unsupported binary/deletion/configuration edits remain explicit.

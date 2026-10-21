@@ -17,10 +17,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm test
+      - run: npm run validate
       - name: Match immutable release tag to package version
         run: node --input-type=module -e 'import {readFileSync} from "node:fs"; const v=JSON.parse(readFileSync("plugins/bluebridge-sites/plugin.json")).version; if(process.env.GITHUB_REF_NAME!==`v${v}`)throw new Error("Release tag/version mismatch")'
-      - run: npm run package
       - name: Publish new candidate assets
         env:
           GH_TOKEN: ${{ github.token }}
