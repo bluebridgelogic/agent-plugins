@@ -27,3 +27,5 @@ Run npm ci, npm test, then npm run package. Artifacts are written to ignored .ar
 ```
 
 For local Codex, add this Git repository through its plugin marketplace UI or CLI, then install `bluebridge-sites@bluebridge`. ChatGPT web and Claude Chat use their own plugin/connector interfaces; a CLI install does not install into those apps.
+
+Local editing now uses a one-use handoff from the existing MCP connection, with a short-lived site-scoped transfer session. The normal workflow has no second helper login. Client explanations default to business-owner language; technical setup remains agent-facing. Actual Claude Code Desktop acceptance is separate from automated checks.

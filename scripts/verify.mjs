@@ -36,7 +36,7 @@ for(const name of skillNames){
  assert.match(files[`skills/${name}/SKILL.md`].toString(),new RegExp('name: '+name+'\\n'));
 }
 assert.ok(files[portable.extensions['com.openai'].onboardingSkill.slice(2)]);
-for(const name of Object.keys(files))assert.ok(['README.md','LICENSE','assets/icon.png','plugin.json','mcp.json','.mcp.json','.claude-plugin/plugin.json'].includes(name)||/^skills\/[a-z-]+\/(SKILL.md|references\/access.md)$/.test(name),'Unexpected packaged file '+name);
+for(const name of Object.keys(files))assert.ok(['README.md','LICENSE','assets/icon.png','plugin.json','mcp.json','.mcp.json','.claude-plugin/plugin.json'].includes(name)||/^skills\/[a-z-]+\/(SKILL.md|references\/(access|local-workspaces).md)$/.test(name),'Unexpected packaged file '+name);
 for(const name of ['mcp.json','.mcp.json']){
  const config=JSON.parse(files[name]);const server=config.mcpServers['bluebridge-sites'];
  assert.equal(server.url,'https://manage.bluebridgelogic.com/mcp');
